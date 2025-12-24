@@ -6,8 +6,10 @@ public class Relearn {
         // System.out.println("Hello " + name);
 
         //area of rectangle
-        int l = 4;
-        int b = 5;
-        System.out.println("The area of the rectangle is : " + (l * b) + "m2");
+        // int l = 4;
+        // int b = 5;
+        // System.out.println("The area of the rectangle is : " + (l * b) + "m2");
+
+        
     }
 }
