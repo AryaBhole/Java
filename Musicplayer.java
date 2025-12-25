@@ -31,9 +31,6 @@ public class Musicplayer{
                 default -> System.out.println("Invalid Choice");
             }
             }
-
-            
-
         } 
         catch (Exception e) {
             System.out.println("Someting went wrong");
