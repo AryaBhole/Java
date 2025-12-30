@@ -7,14 +7,13 @@ public class Q01_05{
         Scanner scanner = new Scanner(System.in);
 
         do { 
-            System.out.print("Enter a number to enter : ");
+            System.out.print("Enter a number : ");
             input = scanner.nextInt();
 
             sum += input;
 
-            System.out.print("Press 'x' to exit : ");
+            System.out.print("Press 'x' to exit or any other key to continue: ");
             x = scanner.next();
-            scanner.nextLine();
         } while (!x.equals("x"));
 
         System.out.println("The sum of all the entered numbers is : " + sum);
