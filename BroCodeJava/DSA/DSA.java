@@ -204,6 +204,15 @@ public class DSA{
 
         Quick Sort : O(nlogn) 
         
+        HashTable : 
+        Hashtable<Integer, String> table = new Hashtable<>();
+        .put()
+        .remove()
+        
+        Graph : 
+        Adjency Matrix :
+        Node {}
+        Graph {}
         */
     }
 }
