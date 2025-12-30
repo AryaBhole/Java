@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Q02_07{
     public static void main(String[] args){
-        int first = 0, second = 1, temp = 0;
+        int first = 0, second = 1, temp;
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter upto where you wan to print your series : ");
