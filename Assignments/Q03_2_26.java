@@ -29,3 +29,4 @@ public class Q03_2_26 {
         sc.close();
     }
 }
+// you could simply use a do while loop to do the same till the entered number is zero and just add within the loop itself 
