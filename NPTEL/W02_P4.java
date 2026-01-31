@@ -18,7 +18,7 @@ public class W02_P4 {
         rect.length = l;
         rect.width = w;
 
-        
+		System.out.println("Sum of length and width is: " + (rect.length + rect.width));
 
         sc.close();
     }
