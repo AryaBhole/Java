@@ -1,31 +1,26 @@
-import java.util.*;
 
 class Solution {
     // Function to merge two halves
-    public void merge(int[] arr, int low, int mid, int high) {
-        // Create temp array
-        List<Integer> temp = new ArrayList<>();
-        int left = low, right = mid + 1;
+    public static void merge(int[] arr, int low, int mid, int high) {
+        // Using a primitive array avoids the overhead of List<Integer> and Autoboxing
+        int[] temp = new int[high - low + 1];
+        int left = low, right = mid + 1, k = 0;
 
-        // Merge both sorted parts
         while (left <= mid && right <= high) {
-            if (arr[left] <= arr[right])
-                temp.add(arr[left++]);
-            else
-                temp.add(arr[right++]);
+            if (arr[left] <= arr[right]) {
+                temp[k++] = arr[left++];
+            } else {
+                temp[k++] = arr[right++];
+            }
         }
 
-        // Add remaining left elements
-        while (left <= mid)
-            temp.add(arr[left++]);
-
-        // Add remaining right elements
-        while (right <= high)
-            temp.add(arr[right++]);
+        while (left <= mid) temp[k++] = arr[left++];
+        while (right <= high) temp[k++] = arr[right++];
 
         // Copy back to original array
-        for (int i = low; i <= high; i++)
-            arr[i] = temp.get(i - low);
+        for (int i = 0; i < temp.length; i++) {
+            arr[low + i] = temp[i];
+        }
     }
 
     // Recursive merge sort
@@ -34,7 +29,7 @@ class Solution {
             return;
 
         // Find mid index
-        int mid = (low + high) / 2;
+        int mid = low + (high - low) / 2;
 
         // Sort left half
         mergeSort(arr, low, mid);
