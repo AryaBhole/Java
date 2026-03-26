@@ -1,3 +1,4 @@
+import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
@@ -13,6 +14,8 @@ public class Frames1 {
 
         ImageIcon icon = new ImageIcon("logo.png");
         frame.setIconImage(icon.getImage());
+
+        frame.getContentPane().setBackground(Color.CYAN); //can use rgb values with new Color(0, 0, 0) or hex code with new Color(0x000FFF)
 
         
     }
