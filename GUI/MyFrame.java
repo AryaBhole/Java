@@ -1,6 +1,7 @@
 // Instead of using JFrame directly in the file you can use a parent class as such
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
@@ -12,11 +13,18 @@ public class MyFrame extends JFrame implements ActionListener{
     MyFrame() {
         
         button = new JButton();
-        button.setBounds(200, 100, 100, 5);
+        button.setBounds(100, 100, 250, 100);
         button.addActionListener(this);
+        button.setText("Button");
+        button.setFocusable(false);
+        //can add icon same as beafore
+        button.setBorder(BorderFactory.createEtchedBorder());
+        button.setEnabled(false);
+        // you can also make suff appear after 1 click by using actionPerformed thing
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
+        this.setLayout(null);
         this.setSize(500, 500);
         this.setVisible(true);
         this.add(button);
@@ -27,7 +35,7 @@ public class MyFrame extends JFrame implements ActionListener{
         if (e.getSource() == button) {
             System.out.println("hii");
         }
-    }   
+    }
 }
 
 // we can remove the actionListener tihing entirely and do button.addActionListener(e -> System.out.println());
