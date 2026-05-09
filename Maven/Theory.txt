@@ -1,3 +1,13 @@
 14:12 in vid
-mvn archetype:generate -DgroupId=com.arya -DartifactId=arya-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.0 -DinteractiveMode=false
 mvn archetype:generate "-DgroupId=com.arya" "-DartifactId=arya-app" "-DarchetypeArtifactId=maven-archetype-quickstart" "-DarchetypeVersion=1.0" "-DinteractiveMode=false"
+
+archetype : template that defines what type of application we need standalone(quickstart) / webapp
+group-id : organisation/company (com.google)
+artifact-id : name of project
+version : version of the project
+dependencies : importing external libraries
+repos : pom.xml file add
+mvn <goal> : compile, test, package
+
+web-app:
+mvn archetype:generate "-DgroupId=com.arya" "-DartifactId=arya-web-app" "-DarchetypeArtifactId=maven-archetype-webapp" "-DarchetypeVersion=1.0" "-DinteractiveMode=false"
