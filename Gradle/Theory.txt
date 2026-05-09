@@ -1,0 +1,5 @@
+gradle init : to initialize
+gradle tasks : gives all comands
+gradle run : genral running
+
+even if gradle is not installed locally "gradlew.bat run" can be used to run file 
