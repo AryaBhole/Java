@@ -8,7 +8,6 @@ class CalcTest {
     @Test
     void testDivide() {
         Calc calc = new Calc();
-        int result = calc.divide(10, 5);
-        assertEquals(2, result);
+        assertEquals(2, calc.divide(10, 5));
     }
 }
