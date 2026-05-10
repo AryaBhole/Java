@@ -1,0 +1,5 @@
+@Test required in JUnit5 and later to signify if something is a test
+assertEquals(correctAns, yourResult, ()->"statement on failing");
+assertNotEquals(same as above);
+assertTrue(true); gives passed
+assertFFalse(false); gives passed
