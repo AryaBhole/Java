@@ -3,3 +3,14 @@ assertEquals(correctAns, yourResult, ()->"statement on failing");
 assertNotEquals(same as above);
 assertTrue(true); gives passed
 assertFFalse(false); gives passed
+assertArrayEquals() same size and elements in same order diffrent method as assertEquals checks if the two refrence variables are equal
+assertThrows(typeException.class, statementToCheck)     (expectation, reality) if both match then pass
+assertTimeout(Duration.ofMillis(time), ()-> method);
+in older junits you can use (timeout=100) right next to @Test it will work similarly
+@BeforeEach indented methods will be called before each @Test is executed
+@AfterEach does same after each @Test
+@BeforeAll for before all the test's once in start only once
+@AfterAll only once after all tests are completed
+
+@Test creates a new instance for each @Test so a constructor for example runs for each method
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS) will help to only create one instance in this static is ot required in all ending methods
